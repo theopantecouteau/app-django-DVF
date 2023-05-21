@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DVF</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'listings/styles.css' %}">
+</head>
+<body>
+<h1>Graphique par ville ou département</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.fname.label_tag }} {{ form.fname }}
+    <input type="submit" value="Rechercher">
+</form>
+<h1 style="color: red"><span>{{error}}</span></h1>
+{% if prix_moyen_appartement or prix_moyen_maison or prix_moyen_dependance or prix_moyen_local_industriel or prix_moyen_m %}
+
+<div id="container-info">
+    <div id="prix-moyen">
+        <h2>Prix moyens en 2022</h2>
+        {% if prix_moyen_appartement %}
+        <p><span>Appartement</span> : {{ prix_moyen_appartement }} €</p>
+        {% endif %}
+        {% if prix_moyen_maison %}
+        <p><span>Maison</span> : {{ prix_moyen_maison }} €</p>
+        {% endif %}
+        {% if prix_moyen_dependance %}
+        <p><span> Dépendance </span>: {{ prix_moyen_dependance }} €</p>
+        {% endif %}
+        {% if prix_moyen_local_industriel %}
+        <p><span> Local industriel </span>: {{ prix_moyen_local_industriel }} €</p>
+        {% endif %}
+        {% if prix_moyen_m %}
+        <p><span> Prix au m² </span>: {{ prix_moyen_m }} €</p>
+        {% endif %}
+    </div>
+    <div id="map-container">
+        <h2>Localisation sur la carte de France</h2>
+            {{ graph_html_map|safe }}
+    </div>
+</div>
+{% endif %}
+<div id="graph-container">
+    <div id="chart-container">
+        {{ graph_html|safe }}
+    </div>
+</div>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+</html>
