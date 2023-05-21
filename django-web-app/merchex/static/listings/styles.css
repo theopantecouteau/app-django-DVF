@@ -1,0 +1,103 @@
+/* Styles pour le formulaire */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  padding: 5px;
+  width: 200px;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* Styles pour le conteneur du graphique */
+#graph-container {
+  margin-bottom: 20px;
+}
+
+/* Styles pour le conteneur du graphique 2 */
+#graph-container2 {
+  margin-bottom: 20px;
+}
+
+/* Styles pour le conteneur du graphique 3 */
+#graph-container3 {
+  margin-bottom: 20px;
+}
+
+/* Styles pour le conteneur du graphique 4 */
+#graph-container4 {
+  margin-bottom: 20px;
+}
+
+#container-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+#map-container{
+  width: 500px;
+  height: 500px;
+}
+
+/* Styles pour le conteneur des prix moyens */
+#prix-moyen {
+  margin-bottom: 20px;
+}
+
+#prix-moyen h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#prix-moyen ul {
+  list-style: none;
+  padding: 0;
+}
+
+#prix-moyen li {
+  margin-bottom: 5px;
+}
+
+/* Styles pour le titre de la page */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+span{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
